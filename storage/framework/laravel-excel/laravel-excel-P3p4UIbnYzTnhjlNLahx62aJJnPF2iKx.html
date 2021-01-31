@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta id="csrf-token" name="csrf-token" content="lsiAkJkk6BbxJ813w6M3bosyuRETXY2i3xYv0XSR">
+
+    <title>Laravel</title>
+
+    <!-- Scripts -->
+    <script src="http://127.0.0.1:8000/js/app.js" defer></script>
+    <script lang="javascript" src="https://cdn.jsdelivr.net/npm/xlsx@0.16.6/dist/xlsx.min.js"></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="http://127.0.0.1:8000/css/app.css" rel="stylesheet">
+</head>
+    <body>
+        <main>
+            <table class="table table-bordered">
+    <tr>
+        <th colspan="7">some title</th>
+    </tr>
+    <tr>
+        <th>Club Name</th>
+        <th>Team Category</th>
+        <th>Team Age</th>
+        <th colspan="4">Competitors</th>
+    </tr>
+        <tr>
+        <td rowspan="3">Monica Club, Nation: BG</td>
+        <td rowspan="3">Women&#039;s Pair</td>
+        <td rowspan="3">Youth</td>
+        <td colspan="4">
+            <table>
+            <tr>
+                <th>Names</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>Fig license</th>
+            </tr>
+                            <tr>
+                    <td>Simeon Ivanov</td>
+                    <td>2020-08-13</td>
+                    <td>Male</td>
+                    <td>1321231231231</td>
+                </tr>
+                                <tr>
+                    <td>Moinika Atanasova</td>
+                    <td>2020-08-19</td>
+                    <td>Female</td>
+                    <td>3213213213211</td>
+                </tr>
+                            </table>
+        </td>
+    </tr>
+        <tr>
+        <td rowspan="3">Monica Club, Nation: BG</td>
+        <td rowspan="3">Women&#039;s Pair</td>
+        <td rowspan="3">Youth</td>
+        <td colspan="4">
+            <table>
+            <tr>
+                <th>Names</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>Fig license</th>
+            </tr>
+                            <tr>
+                    <td>Simeon Ivanov</td>
+                    <td>2020-08-13</td>
+                    <td>Male</td>
+                    <td>1321231231231</td>
+                </tr>
+                                <tr>
+                    <td>Moinika Atanasova</td>
+                    <td>2020-08-19</td>
+                    <td>Female</td>
+                    <td>3213213213211</td>
+                </tr>
+                            </table>
+        </td>
+    </tr>
+        <tr>
+        <td rowspan="4">Monica Club, Nation: BG</td>
+        <td rowspan="4">Women&#039;s Group</td>
+        <td rowspan="4">Youth</td>
+        <td colspan="4">
+            <table>
+            <tr>
+                <th>Names</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>Fig license</th>
+            </tr>
+                            <tr>
+                    <td>adsadas dsadasdas</td>
+                    <td>2020-08-22</td>
+                    <td></td>
+                    <td>13213212321</td>
+                </tr>
+                                <tr>
+                    <td>321321wqa dadsadwdw</td>
+                    <td>2020-08-22</td>
+                    <td></td>
+                    <td>142132132131</td>
+                </tr>
+                                <tr>
+                    <td>adasdadD DADSASADSAD</td>
+                    <td>2020-07-15</td>
+                    <td></td>
+                    <td>312312312</td>
+                </tr>
+                            </table>
+        </td>
+    </tr>
+        <tr>
+        <td rowspan="3">Monica Club, Nation: BG</td>
+        <td rowspan="3">Women&#039;s Pair</td>
+        <td rowspan="3">Youth</td>
+        <td colspan="4">
+            <table>
+            <tr>
+                <th>Names</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>Fig license</th>
+            </tr>
+                            <tr>
+                    <td>Simeon Ivanov</td>
+                    <td>1986-08-18</td>
+                    <td>Male</td>
+                    <td>Simeon</td>
+                </tr>
+                                <tr>
+                    <td>Ivanov Simeon</td>
+                    <td>1989-08-23</td>
+                    <td>Female</td>
+                    <td>dsadsadsa</td>
+                </tr>
+                            </table>
+        </td>
+    </tr>
+    </table>
+        </main>
+        <div id="spinner-container" class="row justify-content-center d-none">
+    <div id="slidecaption" class="text-center">Acro Cup Burgas<br>Loading...</div>
+</div>
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger" id="deleteModalLabel">Deletion!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-title">Are you sure you want to delete it?</div>
+                <div class="modal-body-content"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <div id="rotateDevice">
+    <p class="text-center fixed-top">Please use your device landscape!</p>
+    <p class="text-center fixed-bottom">Please use your device landscape!</p>
+</div>
+    </body>
+</html>

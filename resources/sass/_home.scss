@@ -1,0 +1,139 @@
+.home-page {
+    font-family: cursive;
+    background-image: linear-gradient(to right top, rgba(100, 115, 201, 0.33), rgba(25, 32, 72, 0.7))/* , url('storage/images/home-4.jpg') */;
+    pre {
+        font-feature-settings: normal;
+    }
+    h1 {
+            font-size: 70px;
+    }
+    .registration {
+        background-color: $body-bg;
+    }
+    .text-link {
+        cursor: pointer;
+    }
+}
+nav.main-nav {
+    a {
+        margin: 0 15px;
+        color: $light;
+        font-size: 30px;
+        &:hover {
+            text-decoration: none;
+            color: $gold;
+        }
+        &.active {
+            color: $dark-gold;
+            &:hover {
+                color: $dark-gold;
+            }
+        }
+    }
+    .menu {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+    }
+}
+nav {
+    li {
+        cursor: pointer;
+    }
+}
+select, .delete {
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+    .home-page {
+        h1 {
+            font-size: 35px;
+        }
+    }
+    nav.main-nav {
+        a {
+            display: block;
+            font-size: 25px;
+        }
+    }
+}
+
+#footer {
+    background-color: white;
+    text-align: center;
+    border-top: 5px solid #020544;
+    font-family: cursive;
+    .partners img {
+        max-height: 100px;
+    }
+}
+
+#spinner-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #255fdd86;
+    position: fixed;
+    z-index: 1100;
+    top: 0;
+    left: 0;
+    #slidecaption {
+        font-size: 70px;
+        color: $body-bg;
+        font-style: italic;
+        position: relative;
+        top: calc(50% - 80px);
+        -webkit-animation-name: spinner;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 4s;
+        animation-name: spinner;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+
+    /* WebKit and Opera browsers */
+    @-webkit-keyframes spinner {
+        from {
+            -webkit-transform: rotateY(0deg);
+        }
+        to {
+            -webkit-transform: rotateY(-360deg);
+        }
+    }
+    /* all other browsers */
+    @keyframes spinner {
+        from {
+            -moz-transform: rotateY(0deg);
+            -ms-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+        }
+        to {
+            -moz-transform: rotateY(-360deg);
+            -ms-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+        }
+    }
+}
+
+#rotateDevice {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    background-image: url('storage/images/devRotate.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    @media (orientation: landscape) {
+        display: none;
+    }
+}
