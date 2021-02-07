@@ -5,6 +5,7 @@ function formSubmit() {
         let data = {
             title: $('#title').val(),
             year:  $('#year').val(),
+            participation_fee_tax: $('#participation_fee_tax').val(),
             poster: $('#image-title').html(),
             file: $('.inputImage').attr('src'),
             directive: $('#directive').data('value'),

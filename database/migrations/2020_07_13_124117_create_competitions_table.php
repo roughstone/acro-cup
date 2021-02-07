@@ -18,6 +18,7 @@ class CreateCompetitionsTable extends Migration
             $table->string('title');
             $table->string('year');
             $table->string('active');
+            $table->float('participation_fee_tax')->nullable();
             $table->string('poster')->default('/storage/images/poster.jpg');
             $table->mediumText('file')->nullable();
             $table->string('directive')->nullable();

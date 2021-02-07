@@ -35,6 +35,19 @@
                             </div>
                         </label>
                     </div>
+                    <div class="form-group row mt-2">
+                        <label for="participation_fee_tax" class="col-12 col-form-label">
+                            Participation fee tax:
+                            <div class="col-12 px-0">
+                                <input id="participation_fee_tax" type="number" name="participation_fee_tax" class="form-control @error('participation_fee_tax') is-invalid @enderror" min="0" max="100" step="0.01" value="10.00" required/>
+                                @error('participation_fee_tax')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </label>
+                    </div>
                     <div class="custom-image-input form-group row mt-2">
                         <span id="directive" data-value="" class="col-6">Competition Directive:
                             <span id="competition-direcitive"></span>

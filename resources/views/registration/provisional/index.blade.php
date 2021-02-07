@@ -62,49 +62,49 @@
     </div>
 
     <div class="col-md-6 my-3 row">
-            <div class="card col-12 participants">
-                <div class="card-header">
-                    <div class="form-row">
-                        <div class="col-10 text-center">Participants</div>
-                        <div class="col-2 text-center">#Pax</div>
+        <div class="card col-12 participants">
+            <div class="card-header">
+                <div class="form-row">
+                    <div class="col-10 text-center">Participants</div>
+                    <div class="col-2 text-center">#Pax</div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-row py-1">
+                    <div class="col-10 border-bottom text-center">Women's Pairs</div>
+                    <div class="col-2 input-group">
+                        <input type="number" value="{{$data->women_pairs}}" class="form-control" name="women_pairs">
                     </div>
                 </div>
-                <div class="card-body">
-                    <div class="form-row py-1">
-                        <div class="col-10 border-bottom text-center">Women's Pairs</div>
-                        <div class="col-2 input-group">
-                            <input type="number" value="{{$data->heads_of_delegation}}" class="form-control" name="women_pairs">
-                        </div>
+                <div class="form-row py-1">
+                    <div class="col-10 border-bottom text-center">Mixed Pairs</div>
+                    <div class="col-2 input-group">
+                        <input type="number" value="{{$data->mixed_pairs}}" class="form-control" name="mixed_pairs">
                     </div>
-                    <div class="form-row py-1">
-                        <div class="col-10 border-bottom text-center">Mixed Pairs</div>
-                        <div class="col-2 input-group">
-                            <input type="number" value="{{$data->team_managers}}" class="form-control" name="mixed_pairs">
-                        </div>
+                </div>
+                <div class="form-row py-1">
+                    <div class="col-10 border-bottom text-center">Men's Pairs</div>
+                    <div class="col-2 input-group">
+                        <input type="number" value="{{$data->man_pairs}}" class="form-control" name="man_pairs">
                     </div>
-                    <div class="form-row py-1">
-                        <div class="col-10 border-bottom text-center">Men's Pairs</div>
-                        <div class="col-2 input-group">
-                            <input type="number" value="{{$data->coaches}}" class="form-control" name="man_pairs">
-                        </div>
+                </div>
+                <div class="form-row py-1">
+                    <div class="col-10 border-bottom text-center">Women's Groups</div>
+                    <div class="col-2 input-group">
+                        <input type="number" value="{{$data->woman_groups}}" class="form-control" name="woman_groups">
                     </div>
-                    <div class="form-row py-1">
-                        <div class="col-10 border-bottom text-center">Women's Groups</div>
-                        <div class="col-2 input-group">
-                            <input type="number" value="{{$data->doctors}}" class="form-control" name="woman_groups">
-                        </div>
-                    </div>
-                    <div class="form-row py-1">
-                        <div class="col-10 border-bottom text-center">Men's Groups</div>
-                        <div class="col-2 input-group">
-                            <input type="number" value="{{$data->physiotherapists}}" class="form-control" name="men_groups">
-                        </div>
+                </div>
+                <div class="form-row py-1">
+                    <div class="col-10 border-bottom text-center">Men's Groups</div>
+                    <div class="col-2 input-group">
+                        <input type="number" value="{{$data->men_groups}}" class="form-control" name="men_groups">
                     </div>
                 </div>
             </div>
             <div class="card-footer text-center">
                 Total acrobats: <span class="total"></span>
             </div>
+        </div>
         </div>
         <div class="col-md-4 offset-md-4 my-3">
             <button type="submit" class="btn btn-outline-primary w-100">Submit</button>

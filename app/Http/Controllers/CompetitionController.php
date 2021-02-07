@@ -26,6 +26,7 @@ class CompetitionController extends Controller
         $competition = new Competition([
             'title' => $request->title,
             'year' => $request->year,
+            'participation_fee_tax' => $request->participation_fee_tax,
             'active' => 'inactive',
             'poster' => $request->poster,
             'file' => $request->file,
@@ -92,6 +93,7 @@ class CompetitionController extends Controller
             $competition->update([
                 'title' => $request->title,
                 'year' => $request->year,
+                'participation_fee_tax' => $request->participation_fee_tax,
                 'poster' => $request->poster,
                 'file' => $request->file
                 ]);
