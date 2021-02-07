@@ -24,7 +24,18 @@ function logout() {
     $(document).on('click', '.logout-link', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        $('#logout-form').submit();
+        $('#logout-form').trigger('submit');
+    });
+}
+
+function registrationFormErrorHandle () {
+    $(window).on("load", function() {
+        if ($('#registrationModal .invalid-feedback').length) {
+            $('#registrationModal').modal('show');
+            if ($("label[for='email'] strong").html() === "These credentials do not match our records.") {
+                $('.auth-form').toggleClass('d-none');
+            }
+        }
     });
 }
 
@@ -32,4 +43,5 @@ module.exports = {
     load: load,
     switchAuth: switchAuth,
     logout: logout,
+    registrationFormErrorHandle: registrationFormErrorHandle
 }
