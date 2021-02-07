@@ -42,8 +42,8 @@ Route::get('nominative', 'NominativeController@index')->middleware(['auth', 'act
 Route::post('nominative', 'NominativeController@store')->middleware(['auth', 'active']);
 Route::delete('nominative/{type}/{id}', 'NominativeController@destroy')->middleware('auth');
 
-Route::get('definative', 'DefinativeController@index')->middleware(['auth', 'active']);
-Route::post('definative', 'DefinativeController@update')->middleware(['auth', 'active']);
+Route::get('provisional', 'ProvisionalController@index')->middleware(['auth', 'active']);
+Route::post('provisional', 'ProvisionalController@update')->middleware(['auth', 'active']);
 
 //Admin routes
 Route::get('competition/{competition}', 'AdminController@show')->middleware(['auth', 'admin', 'active']);

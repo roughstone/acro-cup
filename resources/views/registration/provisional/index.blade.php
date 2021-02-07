@@ -1,4 +1,4 @@
-<form id="definative-form" class="row justify-content-center">
+<form id="provisional-form" class="row justify-content-center">
     <div class="col-md-6 my-3 row">
         <div class="card col-12 officials">
             <div class="card-header">

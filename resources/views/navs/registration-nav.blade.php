@@ -33,7 +33,7 @@
                     <a class="nav-link get-page" id="nominative">Nominative</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link get-page" id="definative">Definative</a>
+                    <a class="nav-link get-page" id="provisional">Provisional</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link get-page" id="accommodation">Accommodation</a>

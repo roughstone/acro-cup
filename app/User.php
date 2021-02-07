@@ -47,9 +47,9 @@ class User extends Authenticatable
         return $this->hasMany('App\Competitor');
     }
 
-    public function defenative()
+    public function provisional()
     {
-        return $this->hasMany('App\Defenative');
+        return $this->hasMany('App\Provisional');
     }
 
     public function officials()

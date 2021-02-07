@@ -9,14 +9,14 @@ function countTotal(card) {
 }
 
 function formSubmit() {
-    $(document).on('submit', '#definative-form', (e) => {
+    $(document).on('submit', '#provisional-form', (e) => {
         e.preventDefault();
         e.stopPropagation();
         let records = {};
         $(e.target).find('input').each((key, val) => {
             records[$(val).attr('name')] = $(val).val();
         })
-        axios.post('/definative', {
+        axios.post('/provisional', {
             records: records,
         }).then((response) => {
 
@@ -32,13 +32,13 @@ function formSubmit() {
 }
 
 function updateTotals() {
-    $(document).on('change', '#definative-form input', (e) => {
+    $(document).on('change', '#provisional-form input', (e) => {
         countTotal($(e.target).parents('.card'));
     });
 }
 
 function loadTotals() {
-    $(document).on('definativeLoad', () => {
+    $(document).on('provisionalLoad', () => {
         $('.card').each((key, val) => {
             countTotal($(val))
         });

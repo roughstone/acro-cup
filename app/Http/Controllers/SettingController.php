@@ -71,9 +71,17 @@ class SettingController extends Controller
     {
         foreach ($request->settings as $key =>$value) {
             $update = Setting::where('key', $key)->first();
-            $update->update([
-                'value' => $value
-            ]);
+            if ($update) {
+                $update->update([
+                    'value' => $value
+                ]);
+            } else {
+                $setting = new Setting([
+                    'key' => $key,
+                    'value' => $value
+                ]);
+                $setting->save();
+            }
         }
         return response()->json( ['msg' => '<div class="success-msg text-primary col-12 text-center">Update successfull!</div>']);
     }

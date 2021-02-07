@@ -20,6 +20,8 @@ class CreateCompetitionsTable extends Migration
             $table->string('active');
             $table->string('poster')->default('/storage/images/poster.jpg');
             $table->mediumText('file')->nullable();
+            $table->string('directive')->nullable();
+            $table->mediumText('directive_file')->nullable();
             $table->timestamps();
         });
     }

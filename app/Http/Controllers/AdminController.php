@@ -33,10 +33,10 @@ class AdminController extends Controller
             break;
     }
         return view('admin.'.$resource.'.index', [
-            'data' => $data,
-            'organisation' => $organisation->value,
-            'phone' => $phone->value,
-            'email'=> $email->value
+            'data' => $data ? $data : false,
+            'organisation' => $organisation ? $organisation->value :  '',
+            'phone' => $phone ? $phone->value : '',
+            'email'=> $email ? $email->value  : ''
             ]);
     }
 

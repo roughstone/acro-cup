@@ -22,7 +22,7 @@ $(document).ready(() => {
     processInclude(require('./funcs/home'));
     processInclude(require('./ajax/nav'));
     processInclude(require('./ajax/nominative'));
-    processInclude(require('./ajax/definative'));
+    processInclude(require('./ajax/provisional'));
     processInclude(require('./ajax/profile'));
     processInclude(require('./ajax/accomudation'));
     processInclude(require('./ajax/competition'));

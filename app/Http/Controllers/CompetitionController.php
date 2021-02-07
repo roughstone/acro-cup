@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Competition;
 use App\Competitor;
-use App\Definative;
+use App\Provisional;
 use App\Officials;
 use App\Team;
 use App\Accommodation;
@@ -32,7 +32,7 @@ class CompetitionController extends Controller
             'directive' => $request->directive,
             'directive_file' => $request->directive_file
         ]);
-
+        $competition->save();
         return view('admin.competitions.card', ['item' => $competition]);
     }
 
@@ -45,9 +45,9 @@ class CompetitionController extends Controller
     public function show(Request $request, Competition $competition)
     {
         $users = [];
-        $definatives = Definative::where('competition_id', $competition->id)->get();
-        foreach ($definatives as $definative) {
-            $user = $definative->user;
+        $provisionals = Provisional::where('competition_id', $competition->id)->get();
+        foreach ($provisionals as $provisional) {
+            $user = $provisional->user;
             $officials = Officials::where('user_id', $user->id)->where('competition_id', $competition->id)->get();
             $teams = Team::where('user_id', $user->id)->where('competition_id', $competition->id)->get();
             foreach ($teams as $key => $team) {
@@ -59,7 +59,7 @@ class CompetitionController extends Controller
             $user->competitors = $competitors->toArray();
             $user->travelSchedule = $travelSchedule->toArray();
             $user->accommodation = $accommodation->toArray();
-            $user->definative = $definative->toArray();
+            $user->provisional = $provisional->toArray();
             $user->teams = $teams;
             $user->officials = $officials;
             array_push($users, $user);

@@ -9,9 +9,11 @@
                 <span class="col-6">Competition title:</span>
                 <span class="col-1">Competition year:</span>
             </div>
-            @foreach ($data as $item)
-                @include('admin.competitions.card', ['item' => $item])
-            @endforeach
+            @if ($data)
+                @foreach ($data as $item)
+                    @include('admin.competitions.card', ['item' => $item])
+                @endforeach
+            @endif
         </div>
     </div>
 </div>

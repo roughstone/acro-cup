@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Definative;
+use App\Provisional;
 use Illuminate\Http\Request;
 
-class DefinativeController extends Controller
+class ProvisionalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,17 +14,17 @@ class DefinativeController extends Controller
      */
     public function index(Request $request)
     {
-        $definative = Definative::where('user_id', auth()->id())->get();
-        if (count($definative) != 0) {
-            $data = $definative[0];
+        $provisional = Provisional::where('user_id', auth()->id())->get();
+        if (count($provisional) != 0) {
+            $data = $provisional[0];
         } else {
-            $definative = new Definative();
-            $definative->user_id = auth()->id();
-            $definative->competition_id = $request->activeCompetition;
-            $definative->save();
-            $data = $definative;
+            $provisional = new Provisional();
+            $provisional->user_id = auth()->id();
+            $provisional->competition_id = $request->activeCompetition;
+            $provisional->save();
+            $data = $provisional;
         }
-        return view('registration.definative.index', ['data' => $data]);
+        return view('registration.provisional.index', ['data' => $data]);
     }
 
     /**
@@ -35,20 +35,20 @@ class DefinativeController extends Controller
      */
     public function update(Request $request)
     {
-        $definative = Definative::where('user_id', auth()->id())
+        $provisional = Provisional::where('user_id', auth()->id())
         ->where('competition_id', $request->activeCompetition)->first();
         foreach ($request->records as $key => $value) {
-            $definative->update([$key => $value]);
+            $provisional->update([$key => $value]);
         }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Definative  $definative
+     * @param  \App\Provisional  $provisional
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Definative $definative)
+    public function destroy(Provisional $provisional)
     {
         //
     }

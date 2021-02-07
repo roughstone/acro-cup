@@ -13,8 +13,8 @@ function getIndex() {
                 if ($('button[data-target="pairs"]').length > 0) {
                     $('button[data-target="pairs"]').click();
                 }
-                if($(e.target)[0].id == 'definative') {
-                    $(document).trigger('definativeLoad')
+                if($(e.target)[0].id == 'provisional') {
+                    $(document).trigger('provisionalLoad')
                 }
                 window.history.pushState( {} , '', `/app/${e.target.id}` );
             })
