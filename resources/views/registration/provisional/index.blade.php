@@ -105,9 +105,7 @@
                 Total acrobats: <span class="total"></span>
             </div>
         </div>
-        </div>
-        <div class="col-md-4 offset-md-4 my-3">
-            <button type="submit" class="btn btn-outline-primary w-100">Submit</button>
+            <button type="submit" class="btn btn-outline-primary w-100 mt-3">Submit</button>
         </div>
     </div>
 </form>

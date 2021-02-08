@@ -20,8 +20,6 @@ class CreateCompetitorsTable extends Migration
             $table->string('first_name');
             $table->string('family_name');
             $table->string('birthday');
-            $table->string('gender')->nullable();
-            $table->string('fig_license');
             $table->timestamps();
         });
     }
